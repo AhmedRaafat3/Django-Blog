@@ -22,3 +22,10 @@ class Editpost(generic.UpdateView):
     fields=['author','title','content','tags','image']
     success_url='/blog/'
     template_name='posts/edit.html'
+
+
+class Deletepost(generic.DeleteView):
+    model=post
+    success_url='/blog/'
+
+
